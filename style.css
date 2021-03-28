@@ -1,63 +1,93 @@
 body{
     margin: 0;
+    height: 100vh;
+    background: rgb(44, 44, 44);
 }
 
-.container{
+.container-header{
     display: flex;
     background-color: rgb(99, 197, 2);
     justify-content: space-between;
-    height: 10vh;
+    height: 8vh;
 }
 
-.titulo-principal{
+.titulo-header{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
     color: rgb(70, 70, 70);
     font-size: 3em;
     margin-left: 8vw;
-    margin-top: 1.6vh;
+    margin-top: 0.8vh;
     height: 5vh;
 }
 
-.titulo-principal:hover{
+.titulo-header:hover{
     font-size: 3.1em;
 }
 
 .botoes-header{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    align-items: center;
     font-size: 2.3em;
-    margin-right: 8vw;
-    margin-top: 26.8px;
-    width: 370px;
+    width: 40vw;
+    text-align: center;
+    background-color: rgb(99, 197, 2);
 }
 
 .link-header{
     text-decoration: none;
-    color: rgb(70, 70, 70);
-}
-
-.link-header:active{
-    color: black;
+    color: rgb(44, 44, 44);
 }
 
 .link-header:hover{
     font-size: 1.1em;
 }
 
+.container-principal {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 70vh;
+    min-height: 86%;
+}
 
+img {
+    max-width: 100%;
+}
+
+.foto-animal {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer {
+    background: rgb(99, 197, 2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 6vh;
+    font-size: 1.2em;
+}
 
 
 @media (max-width: 700px)
 {
     .botoes-header{
         width: 100vw;
-        margin: 0vw;
         align-items: center;
         justify-content: space-evenly;
     }
 
-    .titulo-principal {
+    .titulo-header {
         display: none;
     }
 
-}
+    .container-principal{
+        flex-direction: column;
+        justify-content: space-evenly;
+        
+    }
+
+    .foto-animal{
+        max-height: 20%;
+    }
